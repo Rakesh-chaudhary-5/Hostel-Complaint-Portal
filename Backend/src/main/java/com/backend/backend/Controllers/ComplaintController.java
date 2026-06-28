@@ -11,7 +11,7 @@ import java.util.List;
 @CrossOrigin(
         origins = {
                 "http://localhost:5173",
-                "https://https://hostel-complaint-portall.netlify.app"
+                "https://hostel-complaint-portall.netlify.app"
         },
         allowCredentials = "true"
 )
