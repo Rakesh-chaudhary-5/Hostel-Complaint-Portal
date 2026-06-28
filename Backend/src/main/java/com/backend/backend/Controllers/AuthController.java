@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(
         origins = {
                 "http://localhost:5173",
-                "https://your-netlify-site.netlify.app"
+                "https://https://hostel-complaint-portall.netlify.app"
         },
         allowCredentials = "true"
 )public class AuthController {
