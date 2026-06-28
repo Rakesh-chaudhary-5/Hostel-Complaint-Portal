@@ -14,7 +14,8 @@ const MyProvider = ({ children }) => {
         const response = await axios.get("https://hostel-complaint-portal-trnm.onrender.com/loggedInUser",{withCredentials: true});
         setUser(response.data);
       } catch (err) {
-        console.log(err);
+
+        console.log(err+"error");
       }finally{
         setLoading(false);
       }
@@ -26,6 +27,7 @@ const MyProvider = ({ children }) => {
   return (
     <MyContext.Provider value={{user,setUser,loading}}>
       {children}
+      "kkj"
     </MyContext.Provider>
   );
 };
