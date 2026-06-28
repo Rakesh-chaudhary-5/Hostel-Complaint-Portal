@@ -11,7 +11,7 @@ const MyProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/loggedInUser",{withCredentials: true});
+        const response = await axios.get("https://hostel-complaint-portal-trnm.onrender.com/loggedInUser",{withCredentials: true});
         setUser(response.data);
       } catch (err) {
         console.log(err);
