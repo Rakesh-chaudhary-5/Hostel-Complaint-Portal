@@ -35,7 +35,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/register",
+        "http://hostel-complaint-portal-trnm.onrender.com/register",
         formData
       );
       if(res.data){

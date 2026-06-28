@@ -9,7 +9,10 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(
-        origins = "http://localhost:5173",
+        origins = {
+                "http://localhost:5173",
+                "https://your-netlify-site.netlify.app"
+        },
         allowCredentials = "true"
 )
 public class ComplaintController {

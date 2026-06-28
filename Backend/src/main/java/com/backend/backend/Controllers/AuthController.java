@@ -7,7 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")public class AuthController {
+@CrossOrigin(
+        origins = {
+                "http://localhost:5173",
+                "https://your-netlify-site.netlify.app"
+        },
+        allowCredentials = "true"
+)public class AuthController {
     @Autowired
     UserServices userServices;
 
