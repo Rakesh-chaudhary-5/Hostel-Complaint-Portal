@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleLogOut = async ()=>{
      
-      const res = await axios.post("http://localhost:8080/logout",{},{ withCredentials: true})
+      const res = await axios.post("http://hostel-complaint-portal-trnm.onrender.com/logout",{},{ withCredentials: true})
        setUser(null)
        navigate("/login");
   }  

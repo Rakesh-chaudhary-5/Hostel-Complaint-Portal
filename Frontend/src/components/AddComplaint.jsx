@@ -47,7 +47,7 @@ console.log(formData);
     setMessage("");
 
     try {
-      await axios.post("http://localhost:8080/addComplaints", formData);
+      await axios.post("http://hostel-complaint-portal-trnm.onrender.com/addComplaints", formData);
 
       setMessage("Complaint submitted successfully");
       toast.success("Complaint submitted successfully.")

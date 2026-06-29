@@ -24,11 +24,11 @@ function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const appRes = await axios.get("http://localhost:8080/userData");
+        const appRes = await axios.get("http://hostel-complaint-portal-trnm.onrender.com/userData");
         setApplications(appRes.data);
         setFilteredApplications(appRes.data)
 
-        const compRes = await axios.get("http://localhost:8080/fetchComplaints");
+        const compRes = await axios.get("http://hostel-complaint-portal-trnm.onrender.com/fetchComplaints");
         setComplaints(compRes.data);
         setFilteredComplaints(compRes.data);
       } catch (err) {
@@ -41,7 +41,7 @@ function Admin() {
 
   // 🔹 Application actions
   const handleApprove = async (id) => {
-    const res = await axios.put(`http://localhost:8080/acceptReq/${id}`);
+    const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/acceptReq/${id}`);
     if(res.data){
       toast.success("User request APPROVED.")
     }
@@ -49,7 +49,7 @@ function Admin() {
   };
 
   const handleReject = async (id) => {
-    const res = await axios.put(`http://localhost:8080/rejectReq/${id}`);
+    const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/rejectReq/${id}`);
     if(res.data){
       toast.success("User request REJECTED.")
     }

@@ -30,7 +30,7 @@ const handleUpvote = async () => {
     const newVotes = votes + 1;
 
     await axios.put(
-      `http://localhost:8080/update_priority/${id}/${userId}`
+      `http://hostel-complaint-portal-trnm.onrender.com/update_priority/${id}/${userId}`
     );
     window.location.reload(); // 🔥 important
   } catch (err) {
@@ -43,7 +43,7 @@ const handleUpvote = async () => {
   const checkUpvote = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/hasUpvoted",
+        "http://hostel-complaint-portal-trnm.onrender.com/hasUpvoted",
         {
           params: {
             userId: userId,
@@ -66,7 +66,7 @@ const handleUpvote = async () => {
 
 const handleResolve = async () => {
     try {
-      const res = await axios.put(`http://localhost:8080/resolveComplaint/${id}`);
+      const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/resolveComplaint/${id}`);
 
       if(res.data){
         toast.success("Complaint is Resolved")
@@ -80,7 +80,7 @@ const handleResolve = async () => {
 
 const handleInProcess = async () => {
     try {
-      const res = await axios.put(`http://localhost:8080/inProcessComplaint/${id}`);
+      const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/inProcessComplaint/${id}`);
 
       if(res.data){
         toast.success("Complaint is inProcess")

@@ -13,7 +13,7 @@ function Feed() {
 
   useEffect(()=>{
    const fetch = async()=>{
-    const res = await axios.get("http://localhost:8080/fetchComplaints");
+    const res = await axios.get("http://hostel-complaint-portal-trnm.onrender.com/fetchComplaints");
     setComplaints(res.data);
     setFilteredComplaints(res.data);
    }
