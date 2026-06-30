@@ -24,11 +24,11 @@ function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const appRes = await axios.get("http://hostel-complaint-portal-trnm.onrender.com/userData");
+        const appRes = await axios.get("https://hostel-complaint-portal-trnm.onrender.com/userData");
         setApplications(appRes.data);
         setFilteredApplications(appRes.data)
 
-        const compRes = await axios.get("http://hostel-complaint-portal-trnm.onrender.com/fetchComplaints");
+        const compRes = await axios.get("https://hostel-complaint-portal-trnm.onrender.com/fetchComplaints");
         setComplaints(compRes.data);
         setFilteredComplaints(compRes.data);
       } catch (err) {
@@ -41,7 +41,7 @@ function Admin() {
 
   // 🔹 Application actions
   const handleApprove = async (id) => {
-    const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/acceptReq/${id}`);
+    const res = await axios.put(`https://hostel-complaint-portal-trnm.onrender.com/acceptReq/${id}`);
     if(res.data){
       toast.success("User request APPROVED.")
     }
@@ -49,7 +49,7 @@ function Admin() {
   };
 
   const handleReject = async (id) => {
-    const res = await axios.put(`http://hostel-complaint-portal-trnm.onrender.com/rejectReq/${id}`);
+    const res = await axios.put(`https://hostel-complaint-portal-trnm.onrender.com/rejectReq/${id}`);
     if(res.data){
       toast.success("User request REJECTED.")
     }
@@ -128,7 +128,7 @@ function Admin() {
           {/* Left Side: Icon & Text */}
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="https://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
               </svg>
             </div>
@@ -151,7 +151,7 @@ function Admin() {
             </select>
             {/* Custom Dropdown Arrow */}
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
@@ -183,7 +183,7 @@ function Admin() {
                   {/* Left Side: Icon & Text */}
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg xmlns="https://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                       </svg>
                     </div>
@@ -207,7 +207,7 @@ function Admin() {
                     </select>
                     {/* Custom Dropdown Arrow */}
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </div>
