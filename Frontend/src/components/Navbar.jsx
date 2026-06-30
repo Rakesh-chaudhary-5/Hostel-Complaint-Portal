@@ -40,7 +40,7 @@ const Navbar = () => {
           <Link className="hover:underline" to={"/feed"}> feed </Link>
           <Link className="hover:underline" to={"/add_complaint"}> add_complaint </Link>
           </>
-          : user?.role == "user"
+          : user?.role == "admin"
            ? <Link className="hover:underline" to={"/admin"}> admin </Link>
            : ""
          }

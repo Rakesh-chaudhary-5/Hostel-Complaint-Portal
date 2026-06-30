@@ -35,6 +35,8 @@ import org.springframework.web.bind.annotation.*;
 
     @GetMapping("/loggedInUser")
     public User loggedIn(HttpSession session) {
+        System.out.println("CHECK SESSION = " + session.getId());
+        System.out.println("CHECK USERID = " + session.getAttribute("userId"));
         Long userId = (Long) session.getAttribute("userId");
         if(userId == null){
             return null;
